@@ -1,0 +1,60 @@
+baseurl = "/"
+languageCode = "pt-br"
+title = "Fabri"
+theme = "hugo-theme-casper"
+#disqusShortname = "spf13"
+# Enable Google Analytics by inserting your tracking code
+googleAnalytics = ""
+# Define how many posts should appear on a site
+paginate = 10
+canonifyurls = true
+copyright = "Todos os direitos reservados"
+pluralizelisttitles = false
+
+[[menu.main]]
+  name = "Página Inicial"
+  weight = -120
+  identifier = "blog"
+  url = "/"
+
+[[menu.main]]
+  name = "Sobre Fabri"
+  weight = -110
+  identifier = "about"
+  url = "/about"
+  
+[[menu.main]]
+  name = "Instagram"
+  url = "https://www.instagram.com/fabri.house/"
+  weight = 101
+
+[params]
+  description = "Buscando a perfeição em cada detalhe"
+  metadescription = "Num mundo industrializado, onde tudo é feito em lote, é difícil encontrar belos trabalhos artesanais e personalizados. O Fabri House é um projeto para aprender e divulgar a arte da confecção manual de joias, em todos seus detalhes e beleza."
+  cover = "images/cover2b.jpg"
+  author = "Daniel"
+  authorlocation = "São Paulo, Brasil"
+  authorwebsite = "https://fabrihouse.com"
+  #authorbio = "Uma pessoa curiosa, que adora aprender e tentar coisas novas, em busca de bons momentos na beleza da joalheria artesanal."
+  #authoravatar = ""
+  bio = "Uma pessoa curiosa, que adora aprender e tentar coisas novas, em busca de bons momentos na beleza da joalheria artesanal."
+  logo = "images/logo2c.png"
+  #googleAnalyticsUserID = "UA-79101-12"
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  #RSSLink = "http://feeds.feedburner.com/..."
+  #githubName = "vjeantet"
+  #twitterName = "vjeantet"
+  # facebookName = ""
+  # codepenName = ""
+  # linkedinName = ""
+  # stackoverflowId = ""
+  # keybaseName = ""
+  # flickrName = ""
+  # email = ""
+  # pinterestName = ""
+  # googlePlusName = ""
+  instagramName = "fabri.house"
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = false
+  [params.social]
+    twitter = "your_twitter"

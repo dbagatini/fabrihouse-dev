@@ -1,0 +1,9 @@
+<nav class="pagination" role="navigation">
+	{{if .HasPrev}}
+	    <a class="newer-posts" href="{{ .Prev.URL }}">&larr; Mais novos</a>
+	{{end}}
+	<span class="page-number">Página {{ .PageNumber }} de {{.TotalPages}}</span>
+	{{if .HasNext}}
+	    <a class="older-posts" href="{{ .Next.URL }}">Mais antigos &rarr;</a>
+	{{end}}
+</nav>
