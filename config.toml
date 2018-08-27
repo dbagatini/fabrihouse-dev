@@ -20,8 +20,8 @@ pluralizelisttitles = false
 [[menu.main]]
   name = "Sobre Fabri"
   weight = -110
-  identifier = "about"
-  url = "/about"
+  identifier = "sobre"
+  url = "/sobre"
   
 [[menu.main]]
   name = "Instagram"
