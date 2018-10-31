@@ -1,7 +1,14 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 
-{{if .Site.Params.image}}
+{{if .Params.image}}
+  {{if or (eq (substr .Params.image 0 7) "http://") (eq (substr .Params.image 0 8) "https://")}}
+  <header class="main-header post-head" style="background-image: url({{.Params.image}})">
+  {{ else }}
+  <header class="main-header post-head" style="background-image: url({{ $baseurl }}{{.Params.image}})">
+  {{ end }}
+  <nav class="main-nav overlay clearfix">
+{{else if .Site.Params.image}}
   {{if or (eq (substr .Params.image 0 7) "http://") (eq (substr .Params.image 0 8) "https://")}}
   <header class="main-header post-head" style="background-image: url({{.Site.Params.image}})">
   {{ else }}
@@ -32,10 +39,6 @@
 
 
 <main class="content" role="main">
-
-
-
-
   <article class="post {{ .Section }}">
 
     <header class="post-header">

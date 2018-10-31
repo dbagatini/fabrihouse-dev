@@ -2,6 +2,7 @@
 date: 2018-08-26T20:24:16-04:00
 title: Nasce um Projeto
 draft: false
+image: images/denny-muller-718640-unsplash.jpg
 ---
 
 **Um novo projeto ganha vida!**
