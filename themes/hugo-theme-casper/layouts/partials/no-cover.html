@@ -1,0 +1,32 @@
+{{if .Site.Params.cover}}
+  {{if or (eq (substr .Site.Params.cover 0 7) "http://") (eq (substr .Site.Params.cover 0 8) "https://")}}
+  <header class="main-header tag-head" style="background-image: url({{.Site.Params.cover}})">
+  {{ else }}
+  <header class="main-header tag-head" style="background-image: url({{.Site.BaseURL}}{{.Site.Params.cover}})">
+  {{ end }}
+{{else}}
+  <header class="main-header tag-head no-cover">
+{{end}}
+    <nav class="main-nav overlay clearfix">
+      {{ if .Site.Params.logo }}
+        <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{.Site.BaseURL}}{{ .Site.Params.logo }}" alt="Home" /></a>
+      {{end}}
+      {{ if .Site.Menus.main }}
+          <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+      {{else}}
+        {{ if .Site.Params.RSSLink }}
+          <a class="menu-button icon-feed" href="{{.Site.Params.RSSLink }}">&nbsp;&nbsp;Inscreva-se</a>
+        {{end}}
+      {{end}}
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{ .Site.Title }}</h1>
+            {{ with .Site.Params.description }}
+			<h2 class="page-description">
+                {{ . }}
+            </h2>
+			{{ end }}
+        </div>
+    </div>
+</header>

@@ -180,7 +180,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
-
+   
 html {
     height: 100%;
     max-height: 100%;
@@ -485,8 +485,10 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     z-index: 10;
     min-height: 100%;
-    background: #fff;
-    -webkit-transition: -webkit-transform 0.5s ease;
+    /* background: #fff; */
+	background-image: url('/images/dark_wood.png');
+	background-repeat: repeat;
+	-webkit-transition: -webkit-transform 0.5s ease;
             transition: transform 0.5s ease;
 }
 
@@ -512,9 +514,10 @@ body.nav-opened .site-wrapper {
     height: 100vh;
     margin-bottom: 5rem;
     text-align: center;
-    background: #222 no-repeat center center;
+    background: no-repeat center center;
     background-size: cover;
     overflow: hidden;
+	border-bottom: 3px solid #0c0c0c;
 }
 
 .main-header .inner {
@@ -525,9 +528,14 @@ body.nav-opened .site-wrapper {
     text-decoration: none;
 }
 
+.main-header a.bloglogo:focus {
+    text-decoration: none;
+	outline: 0;
+}
+
 .main-nav {
     position: relative;
-    padding: 35px 40px;
+    padding: 15px 40px;
     margin: 0 0 30px 0;
 }
 
@@ -744,6 +752,11 @@ body.nav-opened .nav {
     animation: bounce 4s 2s infinite;
 }
 
+.scroll-down:focus {
+	outline:0;
+	color: #fff;
+}
+
 /* Stop it bouncing and increase contrast when hovered */
 .scroll-down:hover {
     color: #fff;
@@ -866,8 +879,8 @@ body.nav-opened .menu-button .word {
 
 /* Add a border to the buttons on hover */
 .menu-button:hover {
-    border-color: #555;
-    color: #555;
+    border-color: #eee;
+    color: #eee;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -893,11 +906,12 @@ body.nav-opened .menu-button .word {
 .no-cover.main-header {
     min-height: 160px;
     max-height: 40vh;
-    background: #f5f8fa;
+	border-bottom: none;
+    /* background: #f5f8fa; */
 }
 
 .no-cover .page-title {
-    color: rgba(0,0,0,0.8);
+    color: "#eee";
 }
 
 .no-cover .page-description {
@@ -922,13 +936,14 @@ body.nav-opened .menu-button .word {
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
 }
+   
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
     width: 80%;
     max-width: 710px;
-    margin: 4rem auto;
+    margin: 2rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
@@ -936,6 +951,11 @@ body.nav-opened .menu-button .word {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+	padding: 2rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	background-image: url('/images/ep_naturalwhite.png');
+	background-repeat: repeat;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -1151,7 +1171,10 @@ body:not(.post-template) .post-title {
 
 /* Create some space to the right for the share links */
 .post-footer .author {
-    margin-right: 180px;
+    /*margin-right: 180px;*/
+	width: 80%;
+	margin: auto;
+	text-align: center;
 }
 
 .post-footer h4 a {
@@ -1168,16 +1191,18 @@ body:not(.post-template) .post-title {
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
 .post-footer .share {
-    position: absolute;
+    /*position: absolute;
     top: 6rem;
-    right: 0;
+    right: 0;*/
     width: 180px;
+	text-align: center;
+	margin: auto;
 }
 
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
+    margin: 1rem 0.8rem 1.6rem 0.8rem;
     color: #BBC7CC;
     text-decoration: none;
 }
@@ -1186,6 +1211,9 @@ body:not(.post-template) .post-title {
     color: #50585D;
 }
 
+.no-cover .page-title {
+	display: inline-block;
+}
 
 /* ==========================================================================
    6. Author profile
@@ -1200,7 +1228,8 @@ body:not(.post-template) .post-title {
     height: 85px;
     min-height: 0;
     margin-bottom: 0;
-    background: transparent;
+    /* background-image: url('/images/broken_noise.png');
+	background-repeat: repeat; */
 }
 
 .tag-head.main-header {
@@ -1623,11 +1652,11 @@ body:not(.post-template) .post-title {
         padding: 0 5px;
         border-radius: 0;
         border-color: transparent;
-        color: #2e2e2e;
+        color: #9EABB3;
         background: transparent;
     }
     .menu-button:hover {
-        color: #2e2e2e;
+        color: #eee;
         border-color: transparent;
         background: none;
     }
@@ -1778,7 +1807,7 @@ body:not(.post-template) .post-title {
     }
 
     .post-footer .author {
-        margin: 0 0 2rem 0;
+        /* margin: 0 0 2rem 0; */
         padding: 0 0 1.6rem 0;
         border-bottom: #EBF2F6 1px dashed;
     }

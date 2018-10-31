@@ -1,0 +1,15 @@
+{{ with .Content }}
+<div class="index-content post">
+{{ . }}
+</div>
+{{end}}
+
+{{ if .Paginator.HasPrev }}
+	{{ partial "pagination.html" .Paginator }}
+{{ end }}
+
+{{ range $index, $page := .Paginator.Pages }}
+	{{ partial "li.html" . }}
+{{ end }}
+
+{{ partial "pagination.html" .Paginator }}
