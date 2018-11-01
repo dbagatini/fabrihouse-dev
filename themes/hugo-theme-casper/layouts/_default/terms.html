@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+
+{{ partial "no-cover.html" . }}
+
+<main id="content" class="content" role="main">
+	<article class="post {{ .Section }}">
+		<h1 id="title">{{ .Title }}</h1>
+
+    {{ $separator := "false" }}
+    {{ range $key, $value := .Data.Terms }}
+		
+		<span class="separator">•</span>
+		
+        <a href="{{ $key | urlize }}">{{ $key }}</a>
+		{{ $separator := "true" }}
+    {{ end }}
+	</article>
+</main>
+
+{{ partial "footer.html" . }}

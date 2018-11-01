@@ -1,5 +1,7 @@
 {{ partial "header.html" . }}
 
+{{ $paginator:= .Paginate (where .Pages "Type" "post") }}
+
 {{ if .Paginator.HasPrev }}
 	{{ partial "no-cover.html" . }}
 {{ else }}
