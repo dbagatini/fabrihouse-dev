@@ -751,6 +751,7 @@ body.nav-opened .nav {
     color: rgba(255,255,255,0.7);
     -webkit-animation: bounce 4s 2s infinite;
     animation: bounce 4s 2s infinite;
+    text-shadow: -1px 0 #6b6767, 0 1px #6b6767, 1px 0 #6b6767, 0 -1px #6b6767;
 }
 
 .scroll-down:focus {
