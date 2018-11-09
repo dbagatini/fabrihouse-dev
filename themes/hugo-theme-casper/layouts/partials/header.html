@@ -39,6 +39,21 @@
     <link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/nav.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+	<style>
+		@font-face {
+			font-family: "FreebootScript";
+			src: url('{{.Site.BaseURL}}fonts/Freeboot-Script-ASCII/web fonts/freebooterscript_regular_ubasic/freebooterscript-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		
+		@font-face {
+			font-family: "Redressed";
+			src: url('{{.Site.BaseURL}}fonts/Redressed-ASCII/web fonts/redressed_regular_ubasic/Redressed-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+	</style>
 
     {{ if .Site.Params.RSSLink}}
         <link href="{{.Site.Params.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />

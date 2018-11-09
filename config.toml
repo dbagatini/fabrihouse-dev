@@ -32,8 +32,8 @@ pluralizelisttitles = false
 [params]
   description = "Buscando a perfeição em cada detalhe"
   metadescription = "Num mundo industrializado, onde tudo é feito em lote, é difícil encontrar belos trabalhos artesanais e personalizados. O Fabri House é um projeto para aprender e divulgar a arte da confecção manual de joias, em todos seus detalhes e beleza."
-  cover = "images/nick-karvounis-509517-unsplash.jpg"
-  image = "images/denny-muller-718645-unsplash.jpg"
+  cover = "images/nick-karvounis-509517-lr.jpg"
+  image = "images/denny-muller-718645-lr.jpg"
   author = "Daniel"
   authorlocation = "São Paulo, Brasil"
   authorwebsite = "https://fabrihouse.com"

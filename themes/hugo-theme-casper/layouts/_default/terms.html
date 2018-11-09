@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+﻿{{ partial "header.html" . }}
 
 {{ partial "no-cover.html" . }}
 
@@ -6,13 +6,17 @@
 	<article class="post {{ .Section }}">
 		<h1 id="title">{{ .Title }}</h1>
 
-    {{ $separator := "false" }}
+    
+	{{ $scratch := newScratch}}
+	{{ $scratch.Set "separator" ""}}
+	
     {{ range $key, $value := .Data.Terms }}
 		
-		<span class="separator">�</span>
-		
+		{{ with $scratch.Get "separator"}}
+		<span class="separator">{{ . }}</span>
+		{{ end }}
         <a href="{{ $key | urlize }}">{{ $key }}</a>
-		{{ $separator := "true" }}
+		{{ $scratch.Set "separator" "•" }}
     {{ end }}
 	</article>
 </main>
